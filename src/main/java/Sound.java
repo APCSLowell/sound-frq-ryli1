@@ -14,7 +14,7 @@ public class Sound
    *  @return the number of values in this sound that this method changed
    */
   public int limitAmplitude(int limit)
-  {  
+  {
     int n = 0;
     for(int i = 0; i < samples.length; i++) {
       if(samples[i] > limit) {
