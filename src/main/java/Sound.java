@@ -41,14 +41,9 @@ public class Sound
     while(n < samples.length && samples[n] == 0) {
       n++;
     }
-    if(n > 0) {
-      n--;
-    }
     int[] result = new int[samples.length-n];
-    int j = 0;
-    for(int i = n; i < samples.length; i++) {
-      result[j] = samples[i];
-      j++;
+    for(int i = 0; i < samples.length; i++) {
+      result[i] = samples[i+n];
     }
     samples = result;
   }
